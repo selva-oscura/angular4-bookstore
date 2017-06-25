@@ -1,7 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-body{
+html, body{
 	font-family: "Trebuchet MS";
 	font-size: 1em;
+	padding:0;
+	margin:0;
+	-webkit-margin-start:0;
 }
 
 .base-color, .base-color a, .base-color a:visited{
@@ -22,4 +24,53 @@ body{
 .highlight-background, .highlight-background a, .highlight-background a:visited{
 	background-color: #26c6da;
 	color: #ffffff;
+}
+
+.form-space{
+	width: 240px;
+	margin: 0 auto;
+	display: block;
+}
+
+.form-space form{
+	text-align: right;
+}
+.form-space form button{
+	margin-right: 5px;
+}
+
+.product-item-header h2{
+	margin-bottom: 0;
+	-webkit-margin-after: 0;
+	display: inline-block;
+}
+
+.product-item .product-name, .product-item .product-description{
+	text-align: left;
+}
+
+.product-item .product-name{
+	width: calc(99% - 125px);
+}
+
+.product-item .product-price{
+	width: 120px;
+	text-align: right;
+}
+
+.product-description{
+	margin-top: 0;
+	-webkit-margin-before: 0;
+}
+
+.true{
+	color: green;
+}
+
+.false{
+	color: red;
+}
+
+.product-filters{
+	border-bottom: 2px solid red;
 }
