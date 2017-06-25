@@ -6,6 +6,11 @@ html, body{
 	-webkit-margin-start:0;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, ul, li{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
 .base-color, .base-color a, .base-color a:visited{
 	background-color: #ffffff;
 	color: #4527a0;
