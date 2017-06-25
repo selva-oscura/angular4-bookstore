@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	font-family: "Trebuchet MS";
+	font-size: 1em;
+}
+
+.base-color, .base-color a, .base-color a:visited{
+	background-color: #ffffff;
+	color: #4527a0;
+}
+
+.base-color-background, .base-color-background a, .base-color-background a:visited{
+	background-color: #4527a0;
+	color: #ffffff;
+}
+
+.highlight-color, .highlight-color a, .highlight-color a:visited{
+	background-color: #ffffff;
+	color: #26c6da;
+}
+
+.highlight-background, .highlight-background a, .highlight-background a:visited{
+	background-color: #26c6da;
+	color: #ffffff;
+}
