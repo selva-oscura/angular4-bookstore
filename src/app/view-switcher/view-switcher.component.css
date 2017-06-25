@@ -1,0 +1,8 @@
+.view-switcher{
+	height: 50px;
+	position: fixed;
+	top:0px;
+	width:100%;
+	background-color: #111;
+	color: #ddd;
+}
