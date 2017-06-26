@@ -69,4 +69,10 @@ export class AppComponent {
     }
   ]
 
+  public updateProductFilters(form){
+    this.productFilters = form.terms.length === 0 ? [] : form.terms.split(" ").filter((term)=>(term.length))
+  }
+
+
+
 }
