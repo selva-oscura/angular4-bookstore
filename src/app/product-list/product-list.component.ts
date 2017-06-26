@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
 	@Input() products: Array<Object>;
+	@Input() productFilters: Array<String>;
 
   constructor() { }
 
