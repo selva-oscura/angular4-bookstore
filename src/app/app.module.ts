@@ -6,6 +6,7 @@ import { ViewSwitcherComponent } from './view-switcher/view-switcher.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { ProductSearchComponent } from './product-search/product-search.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProductComponent } from './product/product.component';
     ProductComponent,
     ProductListComponent,
     ViewSwitcherComponent,
+    ProductSearchComponent,
   ],
   imports: [
     BrowserModule
