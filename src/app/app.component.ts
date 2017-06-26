@@ -10,7 +10,7 @@ export class AppComponent {
 
   public title: String = 'Bookstore';
 
-  public productFilters: Array<String> = ["search term"]
+  public productFilters: Array<String> = []
 
   public products: Array<Object> = [  
     {
