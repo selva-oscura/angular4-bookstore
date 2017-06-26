@@ -10,9 +10,11 @@ export class AppComponent {
 
   public title: String = 'Bookstore';
 
-  public productFilters: Array<String> = []
+  public productFilters: Array<String> = [];
 
-  public products: Array<Object> = [  
+  public products: Array<Object> = [];
+
+  public allProducts: Array<Object> = [
     {
       title: 'Secrets of the JavaScript Ninja',
       description: `For anyone serious about web development, it's not enough to be a decent JavaScript coder. They need to be ninja-stealthy, efficient, and ready for anything. Secrets of the JavaScript Ninja, Second Edition dives below the surface and helps readers understand the deceptively-complex world of JavaScript and browser-based application development. It skips the basics, and dives into core JavaScript concepts such as functions, closures, objects, prototypes, promises, and so on.`,
@@ -73,6 +75,33 @@ export class AppComponent {
     this.productFilters = form.terms.length === 0 ? [] : form.terms.split(" ").filter((term)=>(term.length))
   }
 
+  public productsContainTerm(product, term): boolean {
+    term = term.toLowerCase();
+    if(product.title.toLowerCase().includes(term) 
+      || product.author.toLowerCase().includes(term) 
+      || product.description.toLowerCase().includes(term) 
+      || product.tags.join(" ").toLowerCase().includes(term)){
+      return true;
+    };
+    return false;    
+  }
 
+  public filterProducts(products): Array<Object> {
+    this.productFilters.forEach((productFilter) => {
+      products = products.filter(product => this.productsContainTerm(product, productFilter)
+      )
+    });
+    return products;
+  }
+
+  public searchProducts(form): void {
+    this.updateProductFilters(form);
+    this.products = this.filterProducts(this.allProducts);
+  }
+
+  constructor(){}
+  ngOnInit(): void {
+    this.products = this.allProducts;
+  }
 
 }
