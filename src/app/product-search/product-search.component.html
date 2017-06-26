@@ -4,6 +4,7 @@
 		<label for="terms">Terms
 			<input type="text" [formControlName]="'terms'" id="terms" value="{{productFilters.join(' ')}}"/>
 		</label><br />
- 		<button type="submit" [disabled]="!form.valid">Search</button>
+		<button (click)="clear()" [disabled]="!form.valid">Clear</button>
+		<button type="submit" [disabled]="!form.valid">Search</button>
 	</form>
 </div>
