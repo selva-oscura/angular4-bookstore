@@ -1,4 +1,22 @@
-.product-item-header h2{
+.product-item .product-image{
+	width: 120px;
+	display: inline-block;
+	padding-left: 12px;
+}
+.product-item .product-image img{
+	width: 100%;
+	display: inline;
+	vertical-align: middle;
+}
+
+.product-text{
+	width: calc(99% - 150px);
+	display: inline-block;
+}
+
+.product-text h2{
+	margin-top: 0;
+	-webkit-margin-before: 0;
 	margin-bottom: 0;
 	-webkit-margin-after: 0;
 	display: inline-block;
@@ -9,10 +27,10 @@
 }
 
 .product-item .product-name{
-	width: calc(99% - 180px);
+	width: calc(99% - 160px);
 }
 
-.product-item .product-price{
+.product-item .product-price,{
 	width: 125px;
 	text-align: right;
 }
@@ -21,4 +39,3 @@
 	margin-top: 0;
 	-webkit-margin-before: 0;
 }
-
