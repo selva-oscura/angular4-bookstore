@@ -6,10 +6,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 	templateUrl: './product-search.component.html',
 	styleUrls: ['./product-search.component.css']
 })
+
 export class ProductSearchComponent implements OnInit {
 
 	@Input() productFilters: Array<String>;
-	@Output() updateProductFilters: EventEmitter<Object> = new EventEmitter<Object>();
+	@Output() searchProducts: EventEmitter<Object> = new EventEmitter<Object>();
 
 	form: FormGroup
 
@@ -22,12 +23,12 @@ export class ProductSearchComponent implements OnInit {
 	}
 
 	submit(): void {
-		this.updateProductFilters.emit(this.form.value);
+		this.searchProducts.emit(this.form.value);
 	}
-	
+
 	clear(): void{
 		this.form.value.terms="";
-		this.updateProductFilters.emit(this.form.value)
+		this.searchProducts.emit(this.form.value)
 		this.form.reset();
 	}
 
