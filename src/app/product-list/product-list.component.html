@@ -1,6 +1,4 @@
 <div class="product-list">
-	<div *ngFor="let product of products">
-		<h2>{{product.title}} by {{product.author}} -- ${{product.price}}<br />
-		{{product.description}}</h2>
-	</div>
+	<product *ngFor="let product of products" [product]="product">
+	</product>
 </div>
