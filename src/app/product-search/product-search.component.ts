@@ -2,9 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'product-search',
-  templateUrl: './product-search.component.html',
-  styleUrls: ['./product-search.component.css']
+	selector: 'product-search',
+	templateUrl: './product-search.component.html',
+	styleUrls: ['./product-search.component.css']
 })
 export class ProductSearchComponent implements OnInit {
 
@@ -13,18 +13,20 @@ export class ProductSearchComponent implements OnInit {
 
 	form: FormGroup
 
-  constructor(private formBuilder: FormBuilder) { }
+	constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
-  	this.form = this.formBuilder.group({
-  		terms: ['', Validators.required],
-  	});
-  }
+	ngOnInit(): void {
+		this.form = this.formBuilder.group({
+			terms: ['', Validators.required],
+		});
+	}
 
-  submit(): void {
-  	// console.log('clicked');
-  	// console.log(this.form);
-  	this.updateProductFilters.emit(this.form.value);
-  }
+	submit(): void {
+		this.updateProductFilters.emit(this.form.value);
+	}
+	clear(): void{
+		this.form.value.terms=""
+		this.updateProductFilters.emit(this.form.value)
+	}
 
 }
