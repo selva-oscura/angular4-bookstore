@@ -24,9 +24,11 @@ export class ProductSearchComponent implements OnInit {
 	submit(): void {
 		this.updateProductFilters.emit(this.form.value);
 	}
+	
 	clear(): void{
-		this.form.value.terms=""
+		this.form.value.terms="";
 		this.updateProductFilters.emit(this.form.value)
+		this.form.reset();
 	}
 
 }
