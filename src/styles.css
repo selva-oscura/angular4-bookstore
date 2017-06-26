@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li{
 	color: #ffffff;
 }
 
+.base-color-underline{
+	border-bottom: 2px solid #4527a0;
+}
+
 .highlight-color, .highlight-color a, .highlight-color a:visited{
 	background-color: #ffffff;
 	color: #26c6da;
@@ -29,6 +33,10 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li{
 .highlight-background, .highlight-background a, .highlight-background a:visited{
 	background-color: #26c6da;
 	color: #ffffff;
+}
+
+.highlight-underline{
+	border-bottom: 2px solid #26c6da;
 }
 
 .form-space{
