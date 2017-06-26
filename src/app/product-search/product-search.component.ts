@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'product-search',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductSearchComponent implements OnInit {
 
-  constructor() { }
+	@Input() productFilters: Array<String>;
+	@Output() updateProductFilters: EventEmitter<Object> = new EventEmitter<Object>();
 
-  ngOnInit() {
+	form: FormGroup
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+  	this.form = this.formBuilder.group({
+  		terms: ['', Validators.required],
+  	});
+  }
+
+  submit(): void {
+  	// console.log('clicked');
+  	// console.log(this.form);
+  	this.updateProductFilters.emit(this.form.value);
   }
 
 }
