@@ -1,0 +1,24 @@
+.product-item-header h2{
+	margin-bottom: 0;
+	-webkit-margin-after: 0;
+	display: inline-block;
+}
+
+.product-item .product-name, .product-item .product-description{
+	text-align: left;
+}
+
+.product-item .product-name{
+	width: calc(99% - 180px);
+}
+
+.product-item .product-price{
+	width: 125px;
+	text-align: right;
+}
+
+.product-description{
+	margin-top: 0;
+	-webkit-margin-before: 0;
+}
+
