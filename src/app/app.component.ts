@@ -10,8 +10,6 @@ export class AppComponent {
 
   public title: String = 'Bookstore';
 
-  public testText: String = 'test text';
-
   public products: Array<Object> = [  
   	{
   		title: "product 1",
