@@ -4,11 +4,19 @@ html, body{
 	padding:0;
 	margin:0;
 	-webkit-margin-start:0;
+	box-sizing: border-box !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, ul, li{
-	padding-left: 12px;
-	padding-right: 12px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+button, .button, input[type="submit"]{
+	width: 100px;
+	height: 25px;
+	border: 0;
+	margin: 12px 0 12px 12px;
 }
 
 .base-color, .base-color a, .base-color a:visited{
@@ -30,6 +38,23 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li{
 	color: #26c6da;
 }
 
+.highlight-color button, .highlight-color .button, .highlight-color input[type="button"], .highlight-color input[type="submit"]{
+	background-color: #26c6da;
+	color: #ffffff;	
+	box-shadow: 0px 4px 4px #ddd;
+	transition: 0.5s ease-in;
+}
+
+.highlight-color button:hover, .highlight-color .button:hover, .highlight-color input[type="button"]:hover, .highlight-color input[type="submit"]:hover{
+	box-shadow: 0px 4px 4px #bbb;
+}
+
+.highlight-color button:disabled, .highlight-color .button:disabled, .highlight-color input[type="button"]:disabled, .highlight-color input[type="submit"]:disabled{
+	background-color: rgba(38, 182,202, 0.66);
+	box-shadow: 0px 4px 4px transparent;
+	color: #ffffff;	
+}
+
 .highlight-background, .highlight-background a, .highlight-background a:visited{
 	background-color: #26c6da;
 	color: #ffffff;
@@ -39,9 +64,19 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li{
 	border-bottom: 2px solid #26c6da;
 }
 
+.half{
+	vertical-align: top;
+	width: calc(50% - 48px);
+	display: inline-block;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .form-space{
 	width: 240px;
-	margin: 0 auto;
+	margin: 24px auto 0;
 	display: block;
 }
 
