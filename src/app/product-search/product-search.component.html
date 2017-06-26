@@ -1,3 +1,9 @@
-<p>
-  product-search works!
-</p>
+<div class="form-space">
+	<h2>Search Products</h2>
+	<form novalidate (ngSubmit)="submit()" [formGroup]="form">
+		<label for="terms">Terms
+			<input type="text" [formControlName]="'terms'" id="terms" value="{{productFilters.join(' ')}}"/>
+		</label><br />
+ 		<button type="submit" [disabled]="!form.valid">Search</button>
+	</form>
+</div>
