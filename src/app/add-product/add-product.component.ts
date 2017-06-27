@@ -11,5 +11,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  addProduct(): void{
+  	console.log('clicked')
+  }
 }
