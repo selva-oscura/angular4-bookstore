@@ -71,6 +71,18 @@ export class AppComponent {
     }
   ]
 
+  public addProduct(product){
+    console.log("triggered addProduct", product);
+    this.allProducts.push({
+      title: product.title,
+      author: product.author,
+      description: product.description,
+      price: product.price,
+      promoted: product.promoted,
+      tags: product.tags,
+    });
+  }
+
   public updateProductFilters(form){
     this.productFilters = form.terms.length === 0 ? [] : form.terms.split(" ").filter((term)=>(term.length))
   }
