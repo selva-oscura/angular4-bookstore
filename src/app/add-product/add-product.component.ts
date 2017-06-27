@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'add-product',
@@ -7,11 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
+	@Output() addProduct: EventEmitter<Object> = new EventEmitter<Object>();
+
   constructor() { }
 
   ngOnInit() {
   }
-  addProduct(): void{
-  	console.log('clicked')
-  }
+	submit(): void {
+		console.log('clicked');
+		let form = {
+			title: 'next title',
+			author: 'A.N. Author',
+			description: 'a new book from A.N. Author',
+			price: 239.99,
+			promoted: true,
+			tags: ['book', 'some topic', 'extraordinary'],
+		}
+		this.addProduct.emit(form);
+	}
 }
