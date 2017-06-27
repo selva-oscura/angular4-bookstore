@@ -41,6 +41,7 @@ button, .button, input[type="submit"]{
 .highlight-color form input[type=text],
 .highlight-color form input[type=email],
 .highlight-color form input[type=password],
+.highlight-color form input[type=number],
 .highlight-color form select,
 .highlight-color form textarea {
 	border: 1px solid #26c6da;
@@ -54,14 +55,13 @@ button, .button, input[type="submit"]{
 .highlight-color form input[type=text]:focus,
 .highlight-color form input[type=email]:focus,
 .highlight-color form input[type=password]:focus,
+.highlight-color form input[type=number]:focus,
 .highlight-color form select:focus,
 .highlight-color form textarea:focus {
 	-webkit-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 	-moz-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 	box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 }
-
-
 
 .highlight-color button, .highlight-color .button, .highlight-color input[type="button"], .highlight-color input[type="submit"]{
 	background-color: #26c6da;
