@@ -1,17 +1,30 @@
-<hr />
 <div class="highlight-color">
+	<hr />
 	<div class="half">
 		<h2>Add a Product</h2>
 	</div>
 	<div class="half">
 		<div class="form-space">		
 			<form novalidate (ngSubmit)="submit()" [formGroup]="form">
-				<label for="name">Title
+				<label for="title">Title
 					<input type="text" [formControlName]="'title'" id="title" />
 				</label><br />
-				<button type="submit">add product</button>
+				<label for="author">Author(s)
+					<input type="text" [formControlName]="'author'" id="author" />
+				</label><br />
+				<label for="description">Description
+					<input type="text" [formControlName]="'description'" id="description" />
+				</label><br />
+				<label for="price">Price
+					<input type="number" [formControlName]="'price'" id="price" />
+				</label><br />
+				<label for="tags">Tags
+					<input type="text" [formControlName]="'tags'" id="tags" />
+				</label><br />
+				<small>(separate tags with commas)</small>
+				<button type="submit">Add new Item</button>
 			</form>
 		</div>
 	</div>
+	<hr />
 </div>
-<hr />
