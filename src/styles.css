@@ -38,6 +38,31 @@ button, .button, input[type="submit"]{
 	color: #26c6da;
 }
 
+.highlight-color form input[type=text],
+.highlight-color form input[type=email],
+.highlight-color form input[type=password],
+.highlight-color form select,
+.highlight-color form textarea {
+	border: 1px solid #26c6da;
+	-webkit-box-shadow: inset 0px 0px 27px -8px rgba(0,0,0,0);
+	-moz-box-shadow: inset 0px 0px 27px -8px rgba(0,0,0,0);
+	box-shadow: inset 0px 0px 27px -8px rgba(0,0,0,0);
+	transition: all cubic-bezier(0.61, -0.04, 0.32, 1.28) .5s;
+	color: #26c6da;
+}
+
+.highlight-color form input[type=text]:focus,
+.highlight-color form input[type=email]:focus,
+.highlight-color form input[type=password]:focus,
+.highlight-color form select:focus,
+.highlight-color form textarea:focus {
+	-webkit-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
+	-moz-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
+	box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
+}
+
+
+
 .highlight-color button, .highlight-color .button, .highlight-color input[type="button"], .highlight-color input[type="submit"]{
 	background-color: #26c6da;
 	color: #ffffff;	
@@ -54,6 +79,8 @@ button, .button, input[type="submit"]{
 	box-shadow: 0px 4px 4px transparent;
 	color: #ffffff;	
 }
+
+
 
 .highlight-background, .highlight-background a, .highlight-background a:visited{
 	background-color: #26c6da;
