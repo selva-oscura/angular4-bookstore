@@ -4,7 +4,14 @@
 		<h2>Add a Product</h2>
 	</div>
 	<div class="half">
-		<button (click)="submit()">add product</button>
+		<div class="form-space">		
+			<form novalidate (ngSubmit)="submit()" [formGroup]="form">
+				<label for="name">Title
+					<input type="text" [formControlName]="'title'" id="title" />
+				</label><br />
+				<button type="submit">add product</button>
+			</form>
+		</div>
 	</div>
 </div>
 <hr />
