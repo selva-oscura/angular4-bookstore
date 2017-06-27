@@ -15,19 +15,15 @@ export class AddProductComponent implements OnInit {
 
 	ngOnInit() {
 		this.form = this.formBuilder.group({
-			title: ['']
+			title: [''],
+			author: [''],
+			description: [''],
+			price: [''],
+			tags: [''],
 		})
 	}
 	submit(): void {
 		console.log('clicked');
-		let form = {
-			title: 'next title',
-			author: 'A.N. Author',
-			description: 'a new book from A.N. Author',
-			price: 239.99,
-			promoted: true,
-			tags: ['book', 'some topic', 'extraordinary'],
-		}
-		this.addProduct.emit(form);
+		this.addProduct.emit(this.form.value);
 	}
 }
