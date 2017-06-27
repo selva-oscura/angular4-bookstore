@@ -4,6 +4,7 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
+  <add-product></add-product>
   <product-search [productFilters]="productFilters" (searchProducts)="searchProducts($event)"></product-search>
   <product-list [products]="products"  [productFilters]="productFilters"></product-list>
 </div>
