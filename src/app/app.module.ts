@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { ProductSearchComponent } from './product-search/product-search.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProductSearchComponent } from './product-search/product-search.componen
     ProductListComponent,
     ViewSwitcherComponent,
     ProductSearchComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
