@@ -5,4 +5,5 @@
 	width:100%;
 	background-color: #111;
 	color: #ddd;
+	z-index: 5;
 }
