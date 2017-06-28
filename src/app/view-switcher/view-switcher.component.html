@@ -1,3 +1,9 @@
 <div class="view-switcher">
-	<p>Currently an Admin? <span class="{{this.isAdmin}}">{{this.isAdmin}}</span></p>
+	<div class="half">
+		<p>Currently an Admin? <span class="{{isAdmin}}">{{isAdmin}}</span></p>
+	</div>
+	<div class="half">
+		<button *ngIf="isAdmin" (click)="onClick()">Switch to User View</button>
+		<button *ngIf="!isAdmin" (click)="onClick()">Switch to Admin View</button>
+	</div>
 </div>
