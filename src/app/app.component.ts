@@ -93,7 +93,7 @@ export class AppComponent {
         .filter((tag)=>(tag.length))
         .join(" ")
        ));
-    this.allProducts.push({
+    this.allProducts.unshift({
       title: product.title,
       author: product.author,
       description: product.description,
