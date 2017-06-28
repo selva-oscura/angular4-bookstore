@@ -10,6 +10,20 @@ export class AppComponent {
 
   public title: String = 'Bookstore';
 
+  public user: Object = {};
+
+  private users: Array<Object> = [
+    {
+      _id:       123,
+      name:     "Sally Sparrow",
+      isAdmin:   true,
+    },{
+      _id:       234,
+      name:     "Larry Nightingale",
+      isAdmin:  false,
+    }
+  ];
+
   public productFilters: Array<String> = [];
 
   public products: Array<Object> = [];
@@ -120,6 +134,7 @@ export class AppComponent {
   constructor(){}
   ngOnInit(): void {
     this.products = this.allProducts;
+    this.user = this.users.filter((u)=>(u["_id"]===234));
   }
 
 }
