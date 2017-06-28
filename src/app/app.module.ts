@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { ProductSearchComponent } from './product-search/product-search.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { PillComponent } from './pill/pill.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AddProductComponent } from './add-product/add-product.component';
     ViewSwitcherComponent,
     ProductSearchComponent,
     AddProductComponent,
+    PillComponent,
   ],
   imports: [
     BrowserModule,
