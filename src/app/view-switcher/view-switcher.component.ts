@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'view-switcher',
@@ -9,8 +9,14 @@ export class ViewSwitcherComponent implements OnInit {
 
 	@Input() isAdmin: Boolean;
 
+	@Output() switchUser: EventEmitter<Boolean> = new EventEmitter<Boolean>();
+
 
   constructor() { }
+
+	onClick(): void {
+		this.switchUser.emit();
+	}
 
   ngOnInit() {
   }
