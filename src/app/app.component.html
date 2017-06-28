@@ -1,11 +1,25 @@
-<view-switcher [isAdmin]="isAdmin" (switchUser)="switchUser($event)"></view-switcher>
-<app-header></app-header>
+<view-switcher 
+	[isAdmin]="isAdmin"
+	(switchUser)="switchUser($event)"
+></view-switcher>
+<app-header
+	[title]="title"
+></app-header>
 <div class="app-body base-color">
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <add-product *ngIf="isAdmin" (addProduct)="addProduct($event)"></add-product>
-  <product-search [productFilters]="productFilters" (searchProducts)="searchProducts($event)"></product-search>
-  <product-list [products]="products"  [productFilters]="productFilters"></product-list>
+  <add-product
+  	*ngIf="isAdmin"
+  	(addProduct)="addProduct($event)"
+  ></add-product>
+  <product-search
+  	[productFilters]="productFilters"
+  	(searchProducts)="searchProducts($event)"
+  ></product-search>
+  <product-list
+  	[products]="products"
+  	[productFilters]="productFilters"
+  ></product-list>
 </div>
 
