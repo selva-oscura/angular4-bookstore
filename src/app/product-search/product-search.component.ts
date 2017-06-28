@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
 	selector: 'product-search',
@@ -12,24 +12,14 @@ export class ProductSearchComponent implements OnInit {
 	@Input() productFilters: Array<String>;
 	@Output() searchProducts: EventEmitter<Object> = new EventEmitter<Object>();
 
-	form: FormGroup
+	public searchTerms: FormControl = new FormControl('');
 
-	constructor(private formBuilder: FormBuilder) { }
+	constructor() { }
 
 	ngOnInit(): void {
-		this.form = this.formBuilder.group({
-			terms: ['', Validators.required],
-		});
-	}
-
-	submit(): void {
-		this.searchProducts.emit(this.form.value);
-	}
-
-	clear(): void{
-		this.form.value.terms="";
-		this.searchProducts.emit(this.form.value)
-		this.form.reset();
+		this.searchTerms.valueChanges.subscribe((value: string) => {
+			this.searchProducts.emit(value)
+		})
 	}
 
 }

@@ -3,14 +3,14 @@
 		<h2>Search Products</h2>
 	</div>
 	<div class="half">	
-		<div class="form-space">		
-			<form novalidate (ngSubmit)="submit()" [formGroup]="form">
-				<label for="terms">Terms
-					<input type="text" [formControlName]="'terms'" id="terms" value="{{productFilters.join(' ')}}"/>
-				</label><br />
-				<button (click)="clear()" [disabled]="!form.valid">Clear</button>
-				<button type="submit" [disabled]="!form.valid">Search</button>
-			</form>
+		<div class="form-space">
+			<label for="searchTerms">Search Terms
+				<input type="text"
+					id="sarchTerms"
+					value="{{productFilters.join(' ')}}"
+					[formControl]="searchTerms"
+				/>
+			</label>
 		</div>
 	</div>
 </div>

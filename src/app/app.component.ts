@@ -115,8 +115,8 @@ export class AppComponent {
     });
   }
 
-  public updateProductFilters(form){
-    this.productFilters = form.terms.length === 0 ? [] : form.terms.split(" ").filter((term)=>(term.length))
+  public updateProductFilters(terms){
+    this.productFilters = terms.length === 0 ? [] : terms.split(" ").filter((term)=>(term.length))
   }
 
   public productsContainTerm(product, term): boolean {
