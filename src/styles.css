@@ -52,12 +52,12 @@ button, .button, input[type="submit"]{
 	background-color: #26c6da;
 }
 
-.highlight-color form input[type=text],
-.highlight-color form input[type=email],
-.highlight-color form input[type=password],
-.highlight-color form input[type=number],
-.highlight-color form select,
-.highlight-color form textarea {
+.highlight-color input[type=text],
+.highlight-color input[type=email],
+.highlight-color input[type=password],
+.highlight-color input[type=number],
+.highlight-color select,
+.highlight-color textarea {
 	border: 1px solid #26c6da;
 	-webkit-box-shadow: inset 0px 0px 27px -8px rgba(0,0,0,0);
 	-moz-box-shadow: inset 0px 0px 27px -8px rgba(0,0,0,0);
@@ -66,12 +66,12 @@ button, .button, input[type="submit"]{
 	color: #26c6da;
 }
 
-.highlight-color form input[type=text]:focus,
-.highlight-color form input[type=email]:focus,
-.highlight-color form input[type=password]:focus,
-.highlight-color form input[type=number]:focus,
-.highlight-color form select:focus,
-.highlight-color form textarea:focus {
+.highlight-color input[type=text]:focus,
+.highlight-color input[type=email]:focus,
+.highlight-color input[type=password]:focus,
+.highlight-color input[type=number]:focus,
+.highlight-color select:focus,
+.highlight-color textarea:focus {
 	-webkit-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 	-moz-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 	box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
@@ -124,10 +124,10 @@ textarea:focus, input:focus{
 	display: block;
 }
 
-.form-space form{
+.form-space {
 	text-align: right;
 }
-.form-space form button{
+.form-space button{
 	margin-right: 5px;
 }
 
