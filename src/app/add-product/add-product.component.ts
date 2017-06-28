@@ -23,7 +23,6 @@ export class AddProductComponent implements OnInit {
 		})
 	}
 	submit(): void {
-		console.log('clicked');
 		this.addProduct.emit(this.form.value);
 		this.form.reset();
 	}
