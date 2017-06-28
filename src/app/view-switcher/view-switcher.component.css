@@ -7,3 +7,8 @@
 	color: #ddd;
 	z-index: 5;
 }
+
+.view-switcher button{
+	width: initial;
+	float: right;
+}
