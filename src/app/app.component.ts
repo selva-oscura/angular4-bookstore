@@ -72,8 +72,6 @@ export class AppComponent {
   ]
 
   public addProduct(product){
-    console.log("triggered addProduct", product);
-    console.log("number of books before add Product", this.allProducts.length);
     let tags = product.tags.length===0 ? [] : product.tags
       .split(",")
       .map((tag)=>(
@@ -89,8 +87,6 @@ export class AppComponent {
       promoted: false,
       tags: tags,
     });
-    console.log("number of books before add Product", this.allProducts.length);
-    console.log("newest book's data", this.allProducts[this.allProducts.length-1]);
   }
 
   public updateProductFilters(form){
