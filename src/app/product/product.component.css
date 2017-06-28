@@ -14,7 +14,7 @@
 }
 
 .product-text{
-	width: calc(99% - 150px);
+	width: calc(99% - 270px);
 	display: inline-block;
 }
 
@@ -36,15 +36,26 @@
 }
 
 .product-item .product-title{
-	width: calc(99% - 140px);
+	width: calc(100% - 140px);
 }
 
-.product-item .product-price,{
-	width: 120px;
+.product-item .product-price {
+	width: 80px;
 	text-align: right;
 }
 
 .product-author, .product-description{
 	margin-top: 0;
 	-webkit-margin-before: 0;
+}
+
+.product-buy-button-space{
+	width: 120px;
+	display: inline-block;
+	padding-right: 12px;
+	vertical-align: top;
+}
+
+.product-buy-button-space button{
+	margin-top: 0px;
 }
