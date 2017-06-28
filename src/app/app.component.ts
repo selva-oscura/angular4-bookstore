@@ -24,7 +24,17 @@ export class AppComponent {
     }
   ];
 
-  public isAdmin: Boolean = false;
+  public isAdmin: Boolean;
+
+  public switchUser(): void {
+    if(this.user["_id"]===123){
+      [this.user] = this.users.filter((u)=>(u["_id"]===234));
+    }else{
+      [this.user] = this.users.filter((u)=>(u["_id"]===123));
+    }
+    this.isAdmin = this.user["isAdmin"];
+    console.log('user now',this.user, this.isAdmin)
+  }
 
   public productFilters: Array<String> = [];
 
@@ -136,7 +146,8 @@ export class AppComponent {
   constructor(){}
   ngOnInit(): void {
     this.products = this.allProducts;
-    this.user = this.users.filter((u)=>(u["_id"]===234));
+    [this.user] = this.users.filter((u)=>(u["_id"]===234));
+    this.isAdmin = this.user['isAdmin'];
   }
 
 }
