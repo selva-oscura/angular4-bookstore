@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'view-switcher',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-switcher.component.css']
 })
 export class ViewSwitcherComponent implements OnInit {
+
+	@Input() isAdmin: Boolean;
+
 
   constructor() { }
 
