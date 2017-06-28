@@ -22,7 +22,7 @@
 					<input type="text" [formControlName]="'tags'" id="tags" />
 				</label><br />
 				<small>(separate tags with commas)</small>
-				<button type="submit">Add new Item</button>
+				<button type="submit" [disabled]="!form.valid">Add new Item</button>
 			</form>
 		</div>
 	</div>
