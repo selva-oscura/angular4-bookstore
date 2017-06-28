@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'add-product',
@@ -15,11 +15,11 @@ export class AddProductComponent implements OnInit {
 
 	ngOnInit() {
 		this.form = this.formBuilder.group({
-			title: [''],
-			author: [''],
-			description: [''],
-			price: [''],
-			tags: [''],
+			title: ['', Validators.required],
+			author: ['', Validators.required],
+			description: ['', Validators.required],
+			price: ['', Validators.required],
+			tags: ['', Validators.required],
 		})
 	}
 	submit(): void {
