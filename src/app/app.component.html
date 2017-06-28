@@ -4,7 +4,7 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <add-product (addProduct)="addProduct($event)"></add-product>
+  <add-product *ngIf="isAdmin" (addProduct)="addProduct($event)"></add-product>
   <product-search [productFilters]="productFilters" (searchProducts)="searchProducts($event)"></product-search>
   <product-list [products]="products"  [productFilters]="productFilters"></product-list>
 </div>
