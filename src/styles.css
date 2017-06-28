@@ -109,7 +109,7 @@ button, .button, input[type="submit"]{
 
 .half{
 	vertical-align: top;
-	width: calc(50% - 48px);
+	width: calc(50% - 12px);
 	display: inline-block;
 }
 
