@@ -76,6 +76,10 @@ button, .button, input[type="submit"]{
 	-moz-box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 	box-shadow: inset 0px 0px 27px -8px rgba(38,182,218,0.5);
 }
+.highlight-color input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
+	-webkit-text-fill-color:#26c6da;
+}
 
 .highlight-color button, .highlight-color .button, .highlight-color input[type="button"], .highlight-color input[type="submit"]{
 	background-color: #26c6da;
@@ -89,12 +93,10 @@ button, .button, input[type="submit"]{
 }
 
 .highlight-color button:disabled, .highlight-color .button:disabled, .highlight-color input[type="button"]:disabled, .highlight-color input[type="submit"]:disabled{
-	background-color: rgba(38, 182,202, 0.66);
+	background-color: rgba(38, 182,202, 0.5);
 	box-shadow: 0px 4px 4px transparent;
 	color: #ffffff;	
 }
-
-
 
 .highlight-background, .highlight-background a, .highlight-background a:visited{
 	background-color: #26c6da;
