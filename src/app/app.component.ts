@@ -33,7 +33,6 @@ export class AppComponent {
       [this.user] = this.users.filter((u)=>(u["_id"]===123));
     }
     this.isAdmin = this.user["isAdmin"];
-    console.log('user now',this.user, this.isAdmin)
   }
 
   public productFilters: Array<String> = [];
