@@ -12,7 +12,7 @@ export class AppComponent {
 
   public user: Object = {};
 
-  private users: Array<Object> = [
+  public users: Array<Object> = [
     {
       _id:       123,
       name:     "Sally Sparrow",
@@ -23,6 +23,8 @@ export class AppComponent {
       isAdmin:  false,
     }
   ];
+
+  public isAdmin: Boolean = false;
 
   public productFilters: Array<String> = [];
 
