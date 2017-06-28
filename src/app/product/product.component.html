@@ -7,6 +7,14 @@
 		<h2 class="product-price">{{product.price}}</h2>
 		<p class="product-author">by {{product.author}}</p>
 		<p class="product-description">{{product.description}}</p>
+		<div>
+			<p>Tags:
+				<pill
+					*ngFor="let text of product.tags" 
+					[text]="text"
+				></pill>
+			</p>
+		</div>
 	</div>
   <div class="product-buy-button-space">
   	<button>Buy Button Component Here</button>
