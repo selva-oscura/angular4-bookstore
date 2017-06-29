@@ -1,6 +1,15 @@
 .pill{
 	display: inline-block;
+	border:1px solid #4527a0;
 	margin: 0 0 24px 12px;
 	padding: 8px 12px;
 	border-radius: 200px;
+	transition: 0.25s ease-in;
+	box-shadow: 0px 3px 3px rgba(98,84,144, 0.4);
+}
+
+.base-color-background.pill:hover{
+	color: #4527a0;
+	background-color: rgba(69,39,160, 0.2);
+	box-shadow: 0px 6px 6px rgba(98,84,144, 0.6);
 }
