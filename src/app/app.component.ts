@@ -137,9 +137,26 @@ export class AppComponent {
     return products;
   }
 
+  public productContainsTag(product, tag): boolean {
+    tag = tag.toLowerCase();
+    if(product.tags.join(" ".toLowerCase().includes(tag))){
+      return true;
+    }
+    return false;
+  }
+
+  public filterProductsByTag(products, tag): Array<Object>{
+    products = products.filter(product => this.productContainsTag(product, tag));
+    return products;
+  }
+
   public searchProducts(form): void {
     this.updateProductFilters(form);
     this.products = this.filterProducts(this.allProducts);
+  }
+
+  public searchProductsByTag(tag): void {
+    this.products = this.filterProductsByTag(this.allProducts, tag);
   }
 
   constructor(){}
